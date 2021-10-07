@@ -2,10 +2,10 @@ const io = require('console-read-write');
 
 export class InputClass {
 
-    private static input;
+    private static input: any;
     constructor() { }
 
-    public static async read(message: string) {
+    public static async Read() {
 
         this.input = await io.read();
 
