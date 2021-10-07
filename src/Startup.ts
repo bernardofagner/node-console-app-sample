@@ -1,5 +1,3 @@
-//import readline from 'readline';
-
 import { InputClass } from "./Utils/Console";
 
 class Startup {
