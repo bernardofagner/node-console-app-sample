@@ -1,13 +1,19 @@
+import { ArrayCommand } from "./Commands/ArraysCommand";
 import { InputClass } from "./Utils/Console";
 
 class Startup {
+
+    private readonly ArrayCommand: ArrayCommand = new ArrayCommand();
+
     public async Run() {
         console.log("------Program started------");
         console.log();
 
-        console.log('Please, write a message...');
-        const message = await InputClass.Read();
-        console.log(`Your message is: <${message}>`);
+        console.log(`Saida: ${this.ArrayCommand.EncontrarUmElementoArraySemRepeticao(3) ? 'Encontrou' : 'Não encontrou'}`);        
+        console.log(`Saida: ${this.ArrayCommand.EncontrarUmElementoArraySemRepeticao(302) ? 'Encontrou' : 'Não encontrou'}`);
+
+        this.ArrayCommand.CriarArrayElementosDistintos();
+
 
         console.log("------Program finished------");
     }
