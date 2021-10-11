@@ -5,7 +5,8 @@ class ArrayCommand {
 
     constructor() { }
 
-    //Não pode usar o metodo array.find()
+    /* Criar um método para encontrar um determinado elemento no array, retornar 'true' caso encontre ou 'false' caso não encontre;
+    Não pode usar o metodo array.find() */
     public EncontrarUmElementoArraySemRepeticao(chave: number): boolean {
         console.log();
         console.log('EncontrarUmElemento - Array desordenado sem repetir elemento');
@@ -18,7 +19,8 @@ class ArrayCommand {
         return false;
     }
 
-    //Não pode usar o método array.filter()
+    /* Criar um método para criar um array com elementos distindos a partir de um array com elementos repetidos
+    Não pode usar o método array.filter()*/
     public CriarArrayElementosDistintos() {
         console.log();
         console.log('CriarArrayElementosDistintos - Array desordenado com repetição de elemento');
@@ -32,6 +34,38 @@ class ArrayCommand {
         }
 
         console.log(`Vetor resultante: ${arrayResultante}`);
+    }
+
+    /*Criar um método para encontrar o elemento com o maior valor em um array numérico
+    Não pode usar o método Math.max()*/
+    public EncontrarMaiorValor() {
+        console.log();
+        console.log('EncontrarMaiorValor - Array desordenado com repetição de elemento');
+        console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
+        let maiorVAlor = Number.MIN_VALUE;
+        for(let valor of this.VetorNumericoDesordenadoComRepeticao) {
+            if (valor > maiorVAlor) {
+                maiorVAlor = valor;
+            }
+        }
+
+        console.log(`Maior valor: ${maiorVAlor}`);
+    }
+
+    /*Criar um método para encontrar o elemento com o menor valor em um array numérico
+    Não pode usar o método Math.max()*/
+    public EncontrarMenorValor() {
+        console.log();
+        console.log('EncontrarMenorValor - Array desordenado com repetição de elemento');
+        console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
+        let menorValor = Number.MAX_VALUE;
+        for(let valor of this.VetorNumericoDesordenadoComRepeticao) {
+            if (valor < menorValor) {
+                menorValor = valor;
+            }
+        }
+
+        console.log(`Menor valor: ${menorValor}`);
     }
 }
 

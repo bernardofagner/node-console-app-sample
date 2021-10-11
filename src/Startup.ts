@@ -13,6 +13,8 @@ class Startup {
         console.log(`Saida: ${this.ArrayCommand.EncontrarUmElementoArraySemRepeticao(302) ? 'Encontrou' : 'Não encontrou'}`);
 
         this.ArrayCommand.CriarArrayElementosDistintos();
+        this.ArrayCommand.EncontrarMaiorValor();
+        this.ArrayCommand.EncontrarMenorValor();
 
 
         console.log("------Program finished------");
