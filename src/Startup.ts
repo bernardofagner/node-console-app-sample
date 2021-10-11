@@ -1,5 +1,4 @@
 import { ArrayCommand } from "./Commands/ArraysCommand";
-import { InputClass } from "./Utils/Console";
 
 class Startup {
 
