@@ -75,6 +75,7 @@ class ArrayCommand {
         console.log('OrdenarArrayNumerico - Array desordenado com repetição de elemento');
         console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
         let PosicaoMenor = 0, valorTemp = 0;
+        const tempArray = this.VetorNumericoDesordenadoComRepeticao
 
         for (let i = 0; i < this.VetorNumericoDesordenadoComRepeticao.length; i++) {
             PosicaoMenor = i;            
@@ -89,6 +90,21 @@ class ArrayCommand {
         }
 
         console.log(`Vetor ordenado: ${this.VetorNumericoDesordenadoComRepeticao}`);
+        this.shuffleArray<number>(this.VetorNumericoDesordenadoComRepeticao);
+    }
+
+    private shuffleArray<T>(array: Array<T>): void {
+
+        const arrayLenght = array.length;
+        let positionA: number, positionB: number, acum: T;
+
+        for (let i = 0;  i < arrayLenght; i++) {
+            positionA = Math.round(Math.random() * arrayLenght);
+            positionB = Math.round(Math.random() * arrayLenght);
+            acum = array[positionA];
+            array[positionA] = array[positionB];
+            array[positionB] = acum;
+        }
     }
 }
 
