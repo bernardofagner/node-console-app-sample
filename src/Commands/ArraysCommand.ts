@@ -67,6 +67,29 @@ class ArrayCommand {
 
         console.log(`Menor valor: ${menorValor}`);
     }
+
+    /*Criar um método para ordenar um array numérico em ordem crescente SelectionSort (Troca os elementos baseado na posicao)
+    Não pode usar metodos array.sort()*/
+    public OrdenarArrayNumerico() {
+        console.log();
+        console.log('OrdenarArrayNumerico - Array desordenado com repetição de elemento');
+        console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
+        let PosicaoMenor = 0, valorTemp = 0;
+
+        for (let i = 0; i < this.VetorNumericoDesordenadoComRepeticao.length; i++) {
+            PosicaoMenor = i;            
+            for (let j = i; j < this.VetorNumericoDesordenadoComRepeticao.length; j++) {
+                if (this.VetorNumericoDesordenadoComRepeticao[j] < this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor]) {
+                    PosicaoMenor = j;
+                }
+            }
+            valorTemp = this.VetorNumericoDesordenadoComRepeticao[i];
+            this.VetorNumericoDesordenadoComRepeticao[i] = this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor];
+            this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor] = valorTemp;            
+        }
+
+        console.log(`Vetor ordenado: ${this.VetorNumericoDesordenadoComRepeticao}`);
+    }
 }
 
 export { ArrayCommand };

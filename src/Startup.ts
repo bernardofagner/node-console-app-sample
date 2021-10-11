@@ -14,7 +14,7 @@ class Startup {
         this.ArrayCommand.CriarArrayElementosDistintos();
         this.ArrayCommand.EncontrarMaiorValor();
         this.ArrayCommand.EncontrarMenorValor();
-
+        this.ArrayCommand.OrdenarArrayNumerico();
 
         console.log("------Program finished------");
     }
