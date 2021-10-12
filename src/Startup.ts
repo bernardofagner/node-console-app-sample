@@ -28,6 +28,7 @@ class Startup {
         this.ArrayCommand.EncontrarMaiorValor();
         this.ArrayCommand.EncontrarMenorValor();
         this.ArrayCommand.OrdenarArrayNumerico();
+        this.ArrayCommand.OrdenarArrayDeObjetos();
     }
 
     public RunObjectCreationMethods(): void {

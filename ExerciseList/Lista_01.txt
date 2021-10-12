@@ -1,0 +1,37 @@
+Considere os seguintes vetores:
+A = [1, 3, 5, 4, 7, 6, 2, 8, 5, 9];
+B = [4, 3, 5, 6, 1, 3, 2, 4, 1, 7, 5, 6, 4];
+C = [
+    {
+        userId: 4,
+        Name: 'Maedhros'
+    },
+    {
+        userId: 2,
+        Name: 'Thingol'
+    },
+    {
+        userId: 5,
+        Name: 'Glorfindel'
+    },
+    {
+        userId: 1,
+        Name: 'Feanor'
+    },
+    {
+        userId: 3,
+        Name: 'Eol'
+    }
+]
+
+1 - Escreva um algoritmo que receba um valor numérico como parâmetro e verifique se o valor recebido como parâmetro é um dos elementos do array A. Caso seja, o método deve retornar <true>, ou <false> caso contrário. O resultado deve ser exibido no console;
+
+2 - Escreva um algorítmo que crie um vetor de elementos não repetidos a partir dos elementos do vetor B. O resultado deve ser exibido no console;
+
+3 - Escreva um algoritmo que encontre o maior valor numerico presente no vetor A. O resultado deve ser exibido no console;
+
+4 - Escreva um algoritmo que encontre o menor valor numerico presente no vetor A. O resultado deve ser exibido no console;
+
+1X - Escreva um algoritmo que seja capaz de ordenar todos os elementos numéricos presentes no array B em ordem crescente;
+
+2X - Escreva um algoritmo que seja capaz de ordenar todos os elementos presentes no array C em ordem crescente, o critério para a ordenação é o UserId;
