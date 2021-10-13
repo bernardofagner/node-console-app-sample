@@ -32,6 +32,6 @@ C = [
 
 4 - Escreva um algoritmo que encontre o menor valor numerico presente no vetor A. O resultado deve ser exibido no console;
 
-1X - Escreva um algoritmo que seja capaz de ordenar todos os elementos numéricos presentes no array B em ordem crescente;
+Desafio 1 - Escreva um algoritmo que seja capaz de ordenar todos os elementos numéricos presentes no array B em ordem crescente;
 
-2X - Escreva um algoritmo que seja capaz de ordenar todos os elementos presentes no array C em ordem crescente, o critério para a ordenação é o UserId;
+Desafio 2 - Escreva um algoritmo que seja capaz de ordenar todos os elementos presentes no array C em ordem crescente, o critério para a ordenação é o UserId;

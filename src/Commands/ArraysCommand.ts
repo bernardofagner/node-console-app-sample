@@ -32,6 +32,7 @@ class ArrayCommand {
     /* Criar um método para encontrar um determinado elemento no array, retornar 'true' caso encontre ou 'false' caso não encontre;
     Não pode usar o metodo array.find() */
     public EncontrarUmElementoArraySemRepeticao(chave: number): boolean {
+
         console.log();
         console.log('EncontrarUmElemento - Array desordenado sem repetir elemento');
         for (let i = 0; i < this.VetorNumericoDesordenadoSemRepeticao.length; i++) {
@@ -46,6 +47,7 @@ class ArrayCommand {
     /* Criar um método para criar um array com elementos distindos a partir de um array com elementos repetidos
     Não pode usar o método array.filter()*/
     public CriarArrayElementosDistintos() {
+
         console.log();
         console.log('CriarArrayElementosDistintos - Array desordenado com repetição de elemento');
         console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
@@ -63,6 +65,7 @@ class ArrayCommand {
     /*Criar um método para encontrar o elemento com o maior valor em um array numérico
     Não pode usar o método Math.max()*/
     public EncontrarMaiorValor() {
+
         console.log();
         console.log('EncontrarMaiorValor - Array desordenado com repetição de elemento');
         console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
@@ -80,6 +83,7 @@ class ArrayCommand {
     /*Criar um método para encontrar o elemento com o menor valor em um array numérico
     Não pode usar o método Math.max()*/
     public EncontrarMenorValor() {
+
         console.log();
         console.log('EncontrarMenorValor - Array desordenado com repetição de elemento');
         console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
@@ -97,6 +101,7 @@ class ArrayCommand {
     /*Criar um método para ordenar um array numérico em ordem crescente SelectionSort (Troca os elementos baseado na posicao)
     Não pode usar metodos array.sort()*/
     public OrdenarArrayNumerico() {
+
         console.log();
         console.log('OrdenarArrayNumerico - Array desordenado com repetição de elemento');
         console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
@@ -109,6 +114,7 @@ class ArrayCommand {
                     PosicaoMenor = j;
                 }
             }
+
             valorTemp = this.VetorNumericoDesordenadoComRepeticao[i];
             this.VetorNumericoDesordenadoComRepeticao[i] = this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor];
             this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor] = valorTemp;
@@ -116,12 +122,12 @@ class ArrayCommand {
 
         console.log(`Vetor ordenado: ${this.VetorNumericoDesordenadoComRepeticao}`);
         this.shuffleArray<number>(this.VetorNumericoDesordenadoComRepeticao);
-        console.log(this.VetorDeObjetos);
     }
 
     /*Criar um método para ordenar um array de objetos em ordem crescente SelectionSort (Troca os elementos baseado na posicao)
     Não pode usar metodos array.sort()*/
     public OrdenarArrayDeObjetos() {
+
         console.log();
         console.log('OrdenarArrayDeObjetos - Array desordenado sem repetição de elemento');
         console.log('Vetor original:', this.VetorDeObjetos);
@@ -135,6 +141,7 @@ class ArrayCommand {
                     PosicaoMenor = j;
                 }
             }
+
             valorTemp = this.VetorDeObjetos[i];
             this.VetorDeObjetos[i] = this.VetorDeObjetos[PosicaoMenor];
             this.VetorDeObjetos[PosicaoMenor] = valorTemp;

@@ -6,7 +6,7 @@ class Startup {
     private readonly ArrayCommand: ArrayCommand;
     private readonly ObjectCreationCommand: ObjectCreationCommand;
 
-    constructor(arrayCommand: ArrayCommand, objectCreationCommand) {
+    constructor(arrayCommand: ArrayCommand, objectCreationCommand: ObjectCreationCommand) {
         this.ArrayCommand = arrayCommand;
         this.ObjectCreationCommand = objectCreationCommand;
     }

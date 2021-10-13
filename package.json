@@ -4,9 +4,10 @@
     "description": "Um projeto idealizado para simular um projeto node console usando typescript",
     "main": "Startup.js",
     "scripts": {
-        "start": "nodemon"
+        "start": "nodemon",
+        "build": "tsc Startup.ts"
     },
-    "author": "Thiago Dutra",
+    "author": "Fagner Oliveira",
     "license": "ISC",
     "devDependencies": {
         "@types/bluebird": "^3.5.32",
