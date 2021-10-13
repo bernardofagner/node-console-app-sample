@@ -26,6 +26,7 @@ class ObjectCreationCommand {
         }
 
         console.log('Interface based person', interfaceBasedPerson);
+        console.log();
     }
 }
 
