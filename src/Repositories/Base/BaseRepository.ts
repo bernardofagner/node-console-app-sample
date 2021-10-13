@@ -21,7 +21,7 @@ abstract class BaseRepository {
 
     protected Insert(sqlQuery: string, params: any = null): string {
         this.database.Query(sqlQuery, params);
-        return 'insert created id';
+        return 'novo id de banco de dados';
     }
 
     protected Get<T>(sqlQuery: string, params: any = null): any {

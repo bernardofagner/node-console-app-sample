@@ -2,6 +2,7 @@ import { UserApplication } from "./Application/UserApplication";
 import { ArrayCommand } from "./Commands/ArraysCommand";
 import { ObjectCreationCommand } from "./Commands/ObjectCreationCommand";
 import { StandardUser, VipUser } from "./Entities/ClassBased/User";
+import { ContractRepository } from "./Repositories/ContractRepository";
 
 class Startup {
 
@@ -67,6 +68,6 @@ class Startup {
 const arrayCommand = new ArrayCommand();
 const objectCreationCommand = new ObjectCreationCommand();
 
-const userAplication = new UserApplication();
+const userAplication = new UserApplication(new ContractRepository('database connection string'));
 
 new Startup(arrayCommand, objectCreationCommand, userAplication).Run();
