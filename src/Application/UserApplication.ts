@@ -15,7 +15,9 @@ class UserApplication implements TUserApplication {
     }
 
     public Execute(user: TAccreditedUser): void {
+
         console.log(user.ShowCredential());
+        
         this.contractRepository.InsertContract(new ContractEntity({
             ContractId: "New contractId"
         }));
