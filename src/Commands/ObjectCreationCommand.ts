@@ -6,7 +6,9 @@ class ObjectCreationCommand {
     constructor() { }
     
     public CreateClassBasedObject(): void {
+
         console.log();
+
         const classBasedPerson = new Person({
             FirstName: 'Fagner',
             LastName: 'Oliveira',
@@ -19,6 +21,7 @@ class ObjectCreationCommand {
     }
 
     public CreateInterfaceBasedObject(): void {
+        
         const interfaceBasedPerson: TPerson = {
             FirstName: 'Fagner',
             Age: 15,

@@ -1,4 +1,5 @@
 class Character {
+    
     public UserId: number;
     public Name: string;
 

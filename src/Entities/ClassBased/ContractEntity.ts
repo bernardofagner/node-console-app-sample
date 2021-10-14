@@ -1,4 +1,5 @@
 class ContractEntity {
+    
     ContractId: string;
 
     constructor(init?: Partial<ContractEntity>) {
