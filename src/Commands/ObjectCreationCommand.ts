@@ -23,7 +23,7 @@ class ObjectCreationCommand {
             FirstName: 'Fagner',
             Age: 15,
             Biography: 'I\'m a interface based object...'
-        }
+        };
 
         console.log('Interface based person', interfaceBasedPerson);
         console.log();
