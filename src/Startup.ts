@@ -2,6 +2,7 @@ import { UserApplication } from "./Application/UserApplication";
 import { ArrayCommand } from "./Commands/ArraysCommand";
 import { ObjectCreationCommand } from "./Commands/ObjectCreationCommand";
 import { StandardUser, VipUser } from "./Entities/ClassBased/User";
+import { ManipulacaoArray } from "./Grazi/ManipulacaoArray";
 import { ContractRepository } from "./Repositories/ContractRepository";
 
 class Startup {
@@ -24,7 +25,7 @@ class Startup {
 
         this.ShowArrayCommandMethods = false;
         this.ShowObjectCreationCommandMethods = false;
-        this.ShowUserApplicationMethods = true;
+        this.ShowUserApplicationMethods = false;
     }
 
     public async Run() {
@@ -33,6 +34,7 @@ class Startup {
         this.ShowArrayCommandMethods && this.RunArrayExercices();
         this.ShowObjectCreationCommandMethods && this.RunObjectCreationMethods();
         this.ShowUserApplicationMethods && this.RunUserApplicationMethods();
+        new ManipulacaoArray().Run();
         console.log("------Program finished------");
     }
 
