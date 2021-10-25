@@ -22,7 +22,47 @@ C = [
         userId: 3,
         Name: 'Eol'
     }
-]
+];
+D = "At home drawing pictures
+Of mountain tops
+With him on top
+Lemon yellow sun
+Arms raised in a V
+And the dead lay in pools of maroon below
+Daddy didn't give attention
+Oh, to the fact that mommy didn't care
+King Jeremy the wicked
+Oh, ruled his world
+Jeremy spoke in class today
+Jeremy spoke in class today
+Clearly I remember
+Pickin' on the boy
+Seemed a harmless little fuck
+But we unleashed the lion
+Gnashed his teeth and bit the recess lady's breast
+How could I forget
+And he hit me with a surprise left
+My jaw left hurting
+Dropped wide open
+Just like the day
+Oh, like the day I heard
+Daddy didn't give affection, no
+And the boy was something that mommy wouldn't wear
+King Jeremy the wicked
+Oh ruled his world
+Jeremy spoke in class today
+Jeremy spoke in class today
+Jeremy spoke in class today
+Try to forget this (try to forget this)
+Try to erase this (try to erase this)
+From the blackboard
+Jeremy spoke in class today
+Jeremy spoke in class today
+Jeremy spoke in
+Spoke in
+Jeremy spoke in
+Spoke in
+Jeremy spoke in class today";
 
 1 - Escreva um algoritmo que receba um valor numérico como parâmetro e verifique se o valor recebido como parâmetro é um dos elementos do array A. Caso seja, o método deve retornar <true>, ou <false> caso contrário. O resultado deve ser exibido no console;
 
@@ -34,7 +74,7 @@ C = [
 
 5 - O reconhecimento de padrões é uma técnica utilizada em diversos algoritmos de busca para localizar itens específicos e todos partem da premissa de encontrar elementos ou a contagem da ocorrência desses elementos em um universo/aglomerado de informação. A funcionalidade "Pesquisar", usualmente acessada pelo atalho "ctrl + F" é uma aplicação prática deste tipo de algoritmo.
 
-Escreva uma função capaz de contar todas as ocorrências de uma substring qualquer presente no texto presente no array D. A função deve receber o array D como parâmetro e retornar um número inteiro que representa a quantidade de vezes que a substring foi encontrada. Utilize o método 'Read()' da classe 'InputClass' em 'src/Utils' para receber a substring via console/terminal.
+Escreva uma função capaz de contar todas as ocorrências de uma substring qualquer presente no texto presente na string D. A função deve recebera string D como parâmetro e retornar um número inteiro que representa a quantidade de vezes que a substring foi encontrada. Utilize o método 'Read()' da classe 'InputClass' em 'src/Utils' para receber a substring via console/terminal.
 
 A cada busca realizada, o programa deve exibir o número de vezes que aquela substring ocorreu no texto e aguardar uma nova entrada de substring no console para realizar uma nova busca. A função deve ser finalizada quando o usuário digitar: 'Sair', 'SAIR', 's', 'S' ou 'sair'.
 
