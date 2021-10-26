@@ -156,6 +156,7 @@ class ArrayCommand {
         this.shuffleArray<Character>(this.VetorDeObjetos);
     }
 
+    /*Criar um método que organiza os números pares nas primeiras posições do array e os demais nas posições restantes*/
     public OrganizarNumerosParesEImpares(): void {
 
         console.log();
@@ -166,10 +167,9 @@ class ArrayCommand {
             vetorLocal.push(item);
         }
 
-        console.log('Vetor original', vetorLocal);
-
         let temp = 0;
         let i = 0, j = 1;
+        
         while(i < vetorLocal.length && j < vetorLocal.length) {
 
             if(vetorLocal[i] %2 !== 0 && vetorLocal[j]%2 === 0) {
