@@ -165,7 +165,7 @@ class ArrayCommand {
         for(let item of this.VetorNumericoDesordenadoComRepeticao) {
             vetorLocal.push(item);
         }
-        
+
         console.log('Vetor original', vetorLocal);
 
         let temp = 0;
@@ -183,9 +183,9 @@ class ArrayCommand {
                 j++;
             }
             else {
-                i++; j++;
+                i++;
+                j++;
             }
-
         }
 
         console.log('Vetor organizado de pares para impares:', vetorLocal);
