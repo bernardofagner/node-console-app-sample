@@ -104,24 +104,29 @@ class ArrayCommand {
 
         console.log();
         console.log('OrdenarArrayNumerico - Array desordenado com repetição de elemento');
-        console.log(`Vetor original: ${this.VetorNumericoDesordenadoComRepeticao}`);
+        const vetorLocal: Array<number> = new Array<number>();
+        for(let item of this.VetorNumericoDesordenadoComRepeticao) {
+            vetorLocal.push(item);
+        }
+
+        console.log(`Vetor original: ${vetorLocal}`);
         let PosicaoMenor = 0, valorTemp = 0;
 
-        for (let i = 0; i < this.VetorNumericoDesordenadoComRepeticao.length; i++) {
+        for (let i = 0; i < vetorLocal.length; i++) {
             PosicaoMenor = i;
-            for (let j = i; j < this.VetorNumericoDesordenadoComRepeticao.length; j++) {
-                if (this.VetorNumericoDesordenadoComRepeticao[j] < this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor]) {
+            for (let j = i; j < vetorLocal.length; j++) {
+                if (vetorLocal[j] < vetorLocal[PosicaoMenor]) {
                     PosicaoMenor = j;
                 }
             }
 
-            valorTemp = this.VetorNumericoDesordenadoComRepeticao[i];
-            this.VetorNumericoDesordenadoComRepeticao[i] = this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor];
-            this.VetorNumericoDesordenadoComRepeticao[PosicaoMenor] = valorTemp;
+            valorTemp = vetorLocal[i];
+            vetorLocal[i] = vetorLocal[PosicaoMenor];
+            vetorLocal[PosicaoMenor] = valorTemp;
         }
 
-        console.log(`Vetor ordenado: ${this.VetorNumericoDesordenadoComRepeticao}`);
-        this.shuffleArray<number>(this.VetorNumericoDesordenadoComRepeticao);
+        console.log(`Vetor ordenado: ${vetorLocal}`);
+        this.shuffleArray<number>(vetorLocal);
     }
 
     /*Criar um método para ordenar um array de objetos em ordem crescente SelectionSort (Troca os elementos baseado na posicao)
@@ -154,12 +159,36 @@ class ArrayCommand {
     public OrganizarNumerosParesEImpares(): void {
 
         console.log();
-        console.log('CriarArrayDeNumerosPrimos()');
-        const arrayDeNumerosPrimos: Array<number> = new Array<number>();
-
-        for(var item of this.VetorNumericoDesordenadoComRepeticao) {
-            console.log(item);
+        console.log('OrganizarNumerosParesEImpares()');
+        
+        const vetorLocal: Array<number> = new Array<number>();
+        for(let item of this.VetorNumericoDesordenadoComRepeticao) {
+            vetorLocal.push(item);
         }
+        
+        console.log('Vetor original', vetorLocal);
+
+        let temp = 0;
+        let i = 0, j = 1;
+        while(i < vetorLocal.length && j < vetorLocal.length) {
+
+            if(vetorLocal[i] %2 !== 0 && vetorLocal[j]%2 === 0) {
+                temp = vetorLocal[i];
+                vetorLocal[i] = vetorLocal[j];
+                vetorLocal[j] = temp;
+                i++;
+                j = i + 1;
+            }
+            else if(vetorLocal[i] %2 !== 0 && vetorLocal[j]%2 !== 0) {
+                j++;
+            }
+            else {
+                i++; j++;
+            }
+
+        }
+
+        console.log('Vetor organizado de pares para impares:', vetorLocal);
     }
 
     private shuffleArray<T>(array: Array<T>): void {
