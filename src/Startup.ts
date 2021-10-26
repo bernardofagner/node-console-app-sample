@@ -29,10 +29,10 @@ class Startup {
         this.UserApplication = userApplication;
         this.StringCommand = stringCommand;
 
-        this.ShowArrayCommandMethods = false;
+        this.ShowArrayCommandMethods = true;
         this.ShowObjectCreationCommandMethods = false;
         this.ShowUserApplicationMethods = false;
-        this.ShowStringCommandMethods = true;
+        this.ShowStringCommandMethods = false;
         this.ShowExerciciosGrazi = false;
     }
 
@@ -58,6 +58,7 @@ class Startup {
         this.ArrayCommand.EncontrarMenorValor();
         this.ArrayCommand.OrdenarArrayNumerico();
         this.ArrayCommand.OrdenarArrayDeObjetos();
+        this.ArrayCommand.OrganizarNumerosParesEImpares();
     }
 
     public RunObjectCreationMethods(): void {

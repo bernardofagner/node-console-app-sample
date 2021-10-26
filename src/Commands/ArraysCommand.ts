@@ -3,7 +3,7 @@ import { Character } from "../Entities/ClassBased/Character";
 class ArrayCommand {
 
     private readonly VetorNumericoDesordenadoSemRepeticao: Array<number> = [4, 3, 2, 6, 8, 12, 34, 54, 1, 6];
-    private readonly VetorNumericoDesordenadoComRepeticao: Array<number> = [5, 3, 2, 6, 3, 12, 3, 6, 1, 6];
+    private readonly VetorNumericoDesordenadoComRepeticao: Array<number> = [5, 3, 2, 6, 3, 12, 3, 6, 1, 6, 7, 11, 8, 3, 5];
     private readonly VetorDeObjetos: Array<Character> = [
         new Character({
             UserId: 4,
@@ -149,6 +149,17 @@ class ArrayCommand {
 
         console.log('Vetor ordenado:', this.VetorDeObjetos);
         this.shuffleArray<Character>(this.VetorDeObjetos);
+    }
+
+    public OrganizarNumerosParesEImpares(): void {
+
+        console.log();
+        console.log('CriarArrayDeNumerosPrimos()');
+        const arrayDeNumerosPrimos: Array<number> = new Array<number>();
+
+        for(var item of this.VetorNumericoDesordenadoComRepeticao) {
+            console.log(item);
+        }
     }
 
     private shuffleArray<T>(array: Array<T>): void {
