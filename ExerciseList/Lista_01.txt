@@ -68,9 +68,13 @@ Jeremy spoke in class today";
 
 2 - Escreva um algorítmo que crie um vetor de elementos não repetidos a partir dos elementos do vetor B. O resultado deve ser exibido no console;
 
-3 - Escreva um algoritmo que encontre o maior valor numerico presente no vetor A. O resultado deve ser exibido no console;
+3 - Escreva um algoritmo que encontre o maior valor numerico presente no vetor A. O resultado deve ser exibido no console. Não pode usar a função Math.max();
 
-4 - Escreva um algoritmo que encontre o menor valor numerico presente no vetor A. O resultado deve ser exibido no console;
+4 - Escreva um algoritmo que encontre o menor valor numerico presente no vetor A. O resultado deve ser exibido no console. Não pode usar a função Math.min();
+
+4.1 = Escreva um algoritmo que crie um array contendo apenas números primos utilizando o array B como fonte de dados. Não pode usar nenhuma função de javascript que filtre números primos;
+
+4.2 = Escreva um algoritmo que organize todos os números pares nas primeiras posições do array B e os números ímpares nas posições restantes.
 
 5 - O reconhecimento de padrões é uma técnica utilizada em diversos algoritmos de busca para localizar itens específicos e todos partem da premissa de encontrar elementos ou a contagem da ocorrência desses elementos em um universo/aglomerado de informação. A funcionalidade "Pesquisar", usualmente acessada pelo atalho "ctrl + F" é uma aplicação prática deste tipo de algoritmo.
 
