@@ -4,16 +4,22 @@ export class ManipulacaoArray {
   
     public Run(): void {
         const value = 50;
-        // Math.round(Math.random()*20);
-        console.log('Elemento no vetor sem repetição:', this.encontrarUmElementoNoArraySemRepeticao(value), '\n');
-        console.log('Elemento no vetor com repetição:', this.encontrarUmElementoNoArrayComRepeticao(value), '\n');
+        console.log('Elemento presente no vetor sem repetição:', this.encontrarUmElementoNoArraySemRepeticao(value), '\n');
+        console.log('Elemento presente no vetor com repetição:', this.encontrarUmElementoNoArrayComRepeticao(value), '\n');
+
         this.criarVetorDeElementosNaoRepetidos();
+
+        const vetor = [7, 6, 45, 34, 76, 3, 21, 105, 43, 282, 10, 2.5];
+        this.encontraMaiorElementoNoVetor(vetor);
+        this.encontraMenorElementoNoVetor(vetor);
     }
 
     // Não pode usar array.prototype.find()
     private encontrarUmElementoNoArraySemRepeticao(elemento: number): boolean {
-        console.log(`Array sem repetição: [${this.VetorA}]`);
-        console.log('O valor aleatório a ser buscado no array é:', elemento);
+        console.log();
+        console.log('Encontrar um elemento em um array desordenado sem números repetidos')
+        console.log(`Vetor original: [${this.VetorA}]`);
+        console.log('Elemento a ser buscado no array:', elemento);
 
         for(let i = 0; i < this.VetorA.length; i++){
             if(this.VetorA[i] === elemento) {
@@ -24,8 +30,10 @@ export class ManipulacaoArray {
     }
 
     private encontrarUmElementoNoArrayComRepeticao(elemento: number): boolean {
-        console.log(`Array com repetição: [${this.VetorB}]`);
-        console.log('O valor aleatório a ser buscado no array é:', elemento);
+        console.log();
+        console.log('Encontrar um elemento em um array desordenado com números repetidos')
+        console.log(`Vetor original: [${this.VetorB}]`);
+        console.log('Elemento a ser buscado no array:', elemento);
 
         for(let i = 0; i < this.VetorB.length; i++){
             if(this.VetorB[i] === elemento) {
@@ -35,21 +43,61 @@ export class ManipulacaoArray {
         return false;
     }
 
-        /* Criar um vetor de elementos não repetidos a partir dos elementos de um vetor com elementos repetidos. Não pode usar array.prototype.filter() */
+    /* Criar um vetor de elementos não repetidos a partir dos elementos de um vetor com elementos repetidos. Não pode usar array.prototype.filter() */
     private criarVetorDeElementosNaoRepetidos(): void {
-        const cestaCheia = this.VetorB;
-        console.log(`Vetor original: [${cestaCheia}]`);
+        const vetorOriginal = this.VetorB;        
+        const vetorElementosNaoRepetidos: Array<number> = [];
 
-        const cestaVazia: Array<number> = [];
-        console.log('Criação vetor: ', cestaVazia);
+        console.log();
+        console.log('Criar vetor sem elementos repetidos')
+        console.log(`Vetor original: [${vetorOriginal}]`);
 
-        for(let i = 0; i < cestaCheia.length; i++){
-            const found = cestaVazia.find(element => element === cestaCheia[i]);
+
+        for(let i = 0; i < vetorOriginal.length; i++){
+            const found = vetorElementosNaoRepetidos.find(element => element === vetorOriginal[i]);
             if(!found){
-                cestaVazia.push(cestaCheia[i])
+                vetorElementosNaoRepetidos.push(vetorOriginal[i])
             }
         }
-        console.log('Cesta atualizada:', cestaVazia);
+        console.log(`Novo vetor: [${vetorElementosNaoRepetidos}]`);
+    }
+
+    /* 3 - Escreva um algoritmo que encontre o maior valor numerico presente no vetor A. O resultado deve ser exibido no console. Não pode usar a função Math.max() */
+    private encontraMaiorElementoNoVetor(vetor): void{
+        console.log();
+        console.log('Encontrar maior elemento em um vetor')
+        console.log(`Vetor original: [${vetor}]`);
+        
+        let maiorNumero = 0; 
+        
+        for(let i = 0; i < vetor.length; i++){
+            let valorAtual = vetor[i];
+  
+            if(valorAtual > maiorNumero){
+                maiorNumero = valorAtual;
+            }
+        }
+        console.log('O maior número do vetor é: ', maiorNumero);
+    }
+
+    private encontraMenorElementoNoVetor(vetor): void{
+        console.log();
+        console.log('Encontrar menor elemento em um vetor')
+        console.log(`Vetor original: [${vetor}]`);
+        
+        let menorNumero;
+        
+        for(let i = 0; i < vetor.length; i++){
+            let valorAtual = vetor[i];
+  
+            if(valorAtual > menorNumero){
+                menorNumero = menorNumero;
+            }
+            else{
+                menorNumero = valorAtual;
+            }
+        }
+        console.log('O menor número do vetor é: ', menorNumero);
     }
 }
 
