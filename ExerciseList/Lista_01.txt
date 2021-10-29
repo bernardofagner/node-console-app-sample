@@ -23,6 +23,7 @@ C = [
         Name: 'Eol'
     }
 ];
+
 D = "At home drawing pictures
 Of mountain tops
 With him on top
@@ -74,12 +75,13 @@ Jeremy spoke in class today";
 
 4.1 = Escreva um algoritmo que organize todos os números pares nas primeiras posições do array B e os números ímpares nas posições restantes.
 
-5 - O reconhecimento de padrões é uma técnica utilizada em diversos algoritmos de busca para localizar itens específicos e todos partem da premissa de encontrar elementos ou a contagem da ocorrência desses elementos em um universo/aglomerado de informação. A funcionalidade "Pesquisar", usualmente acessada pelo atalho "ctrl + F" é uma aplicação prática deste tipo de algoritmo.
+
+5 - Escreva um algoritmo que seja capaz de ordenar todos os elementos numéricos presentes no array B em ordem crescente;
+
+6 - Escreva um algoritmo que seja capaz de ordenar todos os elementos presentes no array C em ordem crescente, o critério para a ordenação é o UserId;
+
+Desafio 1 - O reconhecimento de padrões é uma técnica utilizada em diversos algoritmos de busca para localizar itens específicos e todos partem da premissa de encontrar elementos ou a contagem da ocorrência desses elementos em um universo/aglomerado de informação. A funcionalidade "Pesquisar", usualmente acessada pelo atalho "ctrl + F" é uma aplicação prática deste tipo de algoritmo.
 
 Escreva uma função capaz de contar todas as ocorrências de uma substring qualquer presente no texto presente na string D. A função deve recebera string D como parâmetro e exibir no console um número inteiro que representa a quantidade de vezes que a substring foi encontrada. Utilize o método 'Read()' da classe 'InputClass' em 'src/Utils' para receber a substring via console/terminal.
 
 A cada busca realizada, o programa deve exibir o número de vezes que aquela substring ocorreu no texto e aguardar uma nova entrada de substring no console para realizar uma nova busca. A função deve ser finalizada quando o usuário digitar: 'Sair', 'SAIR', 's', 'S' ou 'sair'.
-
-Desafio 1 - Escreva um algoritmo que seja capaz de ordenar todos os elementos numéricos presentes no array B em ordem crescente;
-
-Desafio 2 - Escreva um algoritmo que seja capaz de ordenar todos os elementos presentes no array C em ordem crescente, o critério para a ordenação é o UserId;
