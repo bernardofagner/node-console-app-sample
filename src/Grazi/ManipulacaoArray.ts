@@ -1,3 +1,5 @@
+import { visitLexicalEnvironment } from "typescript";
+
 export class ManipulacaoArray {
     public VetorA: Array<number> = [1, 3, 5, 4, 7, 6, 2, 8, 5, 9];
     public VetorB: Array<number> = [4, 3, 5, 6, 1, 3, 2, 4, 1, 7, 5, 50, 4];
@@ -9,9 +11,10 @@ export class ManipulacaoArray {
 
         this.criarVetorDeElementosNaoRepetidos();
 
-        const vetor = [7, 6, 45, 34, 76, 3, 21, 105, 43, 282, 10, 2.5];
-        this.encontraMaiorElementoNoVetor(vetor);
-        this.encontraMenorElementoNoVetor(vetor);
+        const vetor = this.VetorB;
+        this.encontraMaiorElementoNoVetor(this.VetorA);
+        this.encontraMenorElementoNoVetor(this.VetorA);
+        this.organizaElementos(vetor);
     }
 
     // Não pode usar array.prototype.find()
@@ -63,44 +66,73 @@ export class ManipulacaoArray {
     }
 
     /* 3 - Escreva um algoritmo que encontre o maior valor numerico presente no vetor A. O resultado deve ser exibido no console. Não pode usar a função Math.max() */
-    private encontraMaiorElementoNoVetor(vetor): void{
+    private encontraMaiorElementoNoVetor(vetor: Array<number>): void{
         console.log();
         console.log('Encontrar maior elemento em um vetor')
         console.log(`Vetor original: [${vetor}]`);
         
-        let maiorNumero = 0; 
+        let maiorNumero = Number.MIN_VALUE; 
         
-        for(let i = 0; i < vetor.length; i++){
-            let valorAtual = vetor[i];
-  
-            if(valorAtual > maiorNumero){
-                maiorNumero = valorAtual;
+        for(let i = 0; i < vetor.length; i++){            
+            if(vetor[i] > maiorNumero){
+                maiorNumero = vetor[i];
             }
         }
         console.log('O maior número do vetor é: ', maiorNumero);
     }
 
-    private encontraMenorElementoNoVetor(vetor): void{
+    private encontraMenorElementoNoVetor(vetor: Array<number>): void{
         console.log();
         console.log('Encontrar menor elemento em um vetor')
         console.log(`Vetor original: [${vetor}]`);
         
-        let menorNumero;
+        let menorNumero = Number.MAX_VALUE;
         
-        for(let i = 0; i < vetor.length; i++){
-            let valorAtual = vetor[i];
-  
-            if(valorAtual > menorNumero){
-                menorNumero = menorNumero;
-            }
-            else{
-                menorNumero = valorAtual;
+        for(let i = 0; i < vetor.length; i++){ 
+            if(vetor[i]< menorNumero){
+                menorNumero = vetor[i];
             }
         }
         console.log('O menor número do vetor é: ', menorNumero);
     }
-}
 
+    private organizaElementos(vetor: Array<number>): void {
+        console.log('');
+        console.log('Organiza vetor colocando elementos pares no início.');
+        console.log(`Vetor original: [${vetor}]`);        
+    
+        let i = 0; 
+        let j = i+1;
+        let aux = 0; 
+
+        do {
+            // vetor[i] ímpar e vetor[j] par
+            if(vetor[i] %2 !==0 && vetor[j] %2 === 0){
+                aux = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = aux; 
+                i++; 
+                j++;
+            }
+            // vetor[i] ímpar e vetor[j] ímpar
+            else if(vetor[i] %2 !==0 && vetor[j] %2 !== 0){
+                j++;
+            }
+
+            //vetor[i] par e vetor[j] par
+            else if(vetor[i] %2 === 0 && vetor[j] %2 !== 0){
+                i++;
+                j++;
+            }
+
+            else {
+                vetor[i] = vetor[i];
+                j++;
+            }
+        } while(i < vetor.length && j < vetor.length);
+        console.log(`Vetor atualizado: [${vetor}]`);
+    }
+}
 
 
 
