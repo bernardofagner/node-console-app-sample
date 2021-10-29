@@ -30,11 +30,11 @@ class Startup {
         this.UserApplication = userApplication;
         this.StringCommand = stringCommand;
 
-        this.ShowArrayCommandMethods = true;
+        this.ShowArrayCommandMethods = false;
         this.ShowObjectCreationCommandMethods = false;
         this.ShowUserApplicationMethods = false;
         this.ShowStringCommandMethods = false;
-        this.ShowExerciciosGrazi = false;
+        this.ShowExerciciosGrazi = true;
     }
 
     public async Run() {
