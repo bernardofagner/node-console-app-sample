@@ -2,6 +2,7 @@ import { UserApplication } from "./Application/UserApplication";
 import { ArrayCommand } from "./Commands/ArraysCommand";
 import { ObjectCreationCommand } from "./Commands/ObjectCreationCommand";
 import { StringCommand } from "./Commands/StringCommand";
+import { Character } from "./Entities/ClassBased/Character";
 import { StandardUser, VipUser } from "./Entities/ClassBased/User";
 import { ManipulacaoArray } from "./Grazi/ManipulacaoArray";
 import { ContractRepository } from "./Repositories/ContractRepository";
@@ -46,6 +47,13 @@ class Startup {
         this.ShowStringCommandMethods && await this.RunStringCommandsMethods();
 
         this.ShowExerciciosGrazi && new ManipulacaoArray().Run();
+
+        let char = new Character({
+            Name: 'Fagner',
+            UserId: 25
+        });
+        
+        char.ShowCharacterNameAndId();
         console.log("------Program finished------");
     }
 
