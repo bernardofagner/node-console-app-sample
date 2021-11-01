@@ -47,13 +47,6 @@ class Startup {
         this.ShowStringCommandMethods && await this.RunStringCommandsMethods();
 
         this.ShowExerciciosGrazi && new ManipulacaoArray().Run();
-
-        let char = new Character({
-            Name: 'Fagner',
-            UserId: 25
-        });
-        
-        char.ShowCharacterNameAndId();
         console.log("------Program finished------");
     }
 
