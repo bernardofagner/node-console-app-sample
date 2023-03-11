@@ -23,7 +23,8 @@ class Startup {
         arrayCommand: ArrayCommand,
         objectCreationCommand: ObjectCreationCommand,
         userApplication: UserApplication,
-        stringCommand: StringCommand) {
+        stringCommand: StringCommand
+    ) {
         this.ArrayCommand = arrayCommand;
         this.ObjectCreationCommand = objectCreationCommand;
         this.UserApplication = userApplication;
