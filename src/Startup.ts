@@ -1,4 +1,3 @@
-import { UserApplication } from "./Application/UserApplication";
 import { TheDivisionApplication } from "./Application/TheDivisionApplication"
 import { ContractRepository } from "./Repositories/ContractRepository";
 
