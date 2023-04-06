@@ -8,12 +8,11 @@ class Startup {
 
     public async Run() {
         console.log("------Program started------");
-        this.executarUserApplication();
-        
+        this.executarTheDivisionApplication();        
         console.log("------Program finished------");
     }
 
-    private executarUserApplication(): void {
+    private executarTheDivisionApplication(): void {
         const theDivisionApplication = new TheDivisionApplication();
         theDivisionApplication.Execute();
     }

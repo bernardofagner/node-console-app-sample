@@ -3,6 +3,6 @@ import { TDivisioApplication } from "../ApplicationCore/TTheDivisioApplication";
 export class TheDivisionApplication implements TDivisioApplication {
     
     Execute(): void {
-        console.log("Executou TheDivisionApplication");
+        console.log("=> Executou TheDivisionApplication");
     }
 }

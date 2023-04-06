@@ -7,7 +7,5 @@ export class UserApplication implements TUserApplication {
 
     Execute(): void {
         console.log(`UserApplication executando...`)
-    }
-
-    
+    }    
 }
