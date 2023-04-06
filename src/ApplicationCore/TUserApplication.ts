@@ -1,3 +1,3 @@
-export default interface TUserApplication {
+export interface TUserApplication {
     Execute(): void;
 }

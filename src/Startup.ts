@@ -1,4 +1,5 @@
 import { UserApplication } from "./Application/UserApplication";
+import { TheDivisionApplication } from "./Application/TheDivisionApplication"
 import { ContractRepository } from "./Repositories/ContractRepository";
 
 class Startup {
@@ -13,8 +14,8 @@ class Startup {
     }
 
     private executarUserApplication(): void {
-        const userAplication = new UserApplication();
-        userAplication.Execute();
+        const theDivisionApplication = new TheDivisionApplication();
+        theDivisionApplication.Execute();
     }
 }
 
