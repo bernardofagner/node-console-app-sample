@@ -1,4 +1,4 @@
-import { AcessorioEquipamentoEntity } from "./AcessorioEquipamentoEntity";
+import { AcessorioEquipamentoEntity } from "../AcessorioEquipamentoEntity";
 
 export class MascaraEntity {
     Protecao: number = 0;

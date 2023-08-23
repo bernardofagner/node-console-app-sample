@@ -3,7 +3,7 @@ import { AcessorioEquipamentoEntity } from "./AcessorioEquipamentoEntity";
 
 export class PecaEquipamentoEntity {
 
-    Tipo: TipoPecaEquipamento
+    Tipo: TipoPecaEquipamento = TipoPecaEquipamento.INDEFINIDO;
     Protecao: number = 0;
     DanoDeArma: number = 0;
     ChanceCritico: number = 0;

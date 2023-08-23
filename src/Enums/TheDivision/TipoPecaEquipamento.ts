@@ -5,4 +5,5 @@ export enum TipoPecaEquipamento {
     LUVA = 'LUVA',
     MASCARA = 'MASCARA',
     MOCHILA = 'MOCHILA',
+    INDEFINIDO = ''
 }
